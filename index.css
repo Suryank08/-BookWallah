@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Libre+Franklin:ital,wght@1,900&family=Lobster&display=swap');
+
+  @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@900&display=swap');
+ 
+  @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
+
+  @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
+
+  @import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@600&display=swap');
+
+
+ body {
+    margin: 0px;
+    box-sizing: border-box;
+
+}
+
+#title {
+    text-align: center;
+    font-family: 'Bungee Spice', sans-serif;
+    font-size: 2.4vw;
+}
+
+header {
+    position: sticky;
+    top:0px;
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 1.5vw;
+    z-index: 1000;
+
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(0, 0, 0);
+    overflow: hidden;
+
+}
+
+li {
+    float: left;
+}
+
+li,
+a {
+    display: inline;
+    margin: 0.5vw;
+    padding-top: 1.5vw;
+    padding-bottom: 1.5vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    text-decoration: none;
+    color: white;
+
+}
+#spanCart{
+    color: white;
+    background-color:red;
+    border-radius: 100%;
+    padding: 1vw;
+}
+li:hover{
+    background-color: rgba(157, 249, 249, 0.807);
+}
+li:hover,a:hover {
+    color: black;
+    transition: 0.7s;
+
+}
+li:hover #spanCart{
+ display: none;
+}
+
+
+#image{
+   
+    width: 100%;
+   height:45vh; 
+}
+#categories{
+    margin-top: 0.8vh;
+display: flex;
+flex-direction: row;
+justify-content:space-between ;
+justify-content: space-around;
+flex-wrap: wrap;
+}
+#categories div{
+    width: 15vw;
+    height: 11vw;
+   display: flex;
+   flex-wrap: wrap;
+   align-content: center;
+   justify-content: center;
+   font-size: 2vh;
+   text-align: center;
+   font-weight:bolder;
+   font-family: sans-serif;
+}
+#School{
+    background-color: #FFB6D9;
+}
+#Magzine{
+    background-color :#FEFFAC;
+}
+#College{
+    background-color:#45FFCA ;
+
+}
+#Neet{
+    background-color: rgb(214, 123, 255);
+}
+#Jee{
+    background-color:rgb(126, 215, 193) ;
+}
+#Comic{
+    background-color: rgb(220, 134, 134);
+}
+#categories div:hover{
+    transition: 0.5s;
+    font-size: 2.7vh;
+background-color:black;
+color: white;
+font-family: 'Libre Franklin', sans-serif;
+}
+#Featured{
+    margin-top: 6vh;
+ font-family: 'Comfortaa', sans-serif;
+font-size: 1.6vw;
+text-align: center;
+font-weight: bold;
+}
+#Featured b{
+    border-bottom-style: solid;
+    border-bottom-color: red;
+    border-width: 2px;
+}
+#bookName{
+    display: flex;
+    flex-direction:row ;
+    flex-wrap: wrap;
+    margin:7px;
+    padding: 2vw;
+}
+#bookName div{
+    padding: 1vw;
+    margin:6vw;
+    width: 30vw;
+    height: 50vw;
+    border-style: solid;
+    border-radius: 0.7vw;
+    box-shadow: 1vh 1vh 1.2vh 1.2vh black ;
+}
+#bookName div:hover{
+    box-shadow: 0px 0px 0px 0px white;
+    transition: 0.2s;
+    transform: scale(1.05);
+} 
+
+#bookName div p{
+    border-top-style: solid;
+ font-size: 2vw;
+font-family: 'Comfortaa', sans-serif;
+text-align: center;
+}
+#bookName div button{
+    margin-left:30%;
+    margin-top:0%;
+    border-radius: 1vw;
+    background-color: #45FFCA;
+    padding: 1vw;
+    font-size: 2vw;
+    cursor: pointer;
+}
+p span{
+    color: red;
+    
+}
+
+
+#footer{
+    margin-top: 10vh;
+}
+
+svg{ display: block;
+    transform: rotate(180deg);
+ margin:50px 0px 0px;
+ padding: 0px;
+}
+#blackBox{
+    border-top-width: 5px;
+    margin: -1vh 0px 0px 0px ;
+ padding: 0px;
+width: 100%;
+background-color:black;
+position:absolute;
+z-index:-1;
+}
+#blackBoxContent{
+color:white;
+margin-top: 7vh;
+margin-left: 4.7vw;
+
+}
+#blackBoxContent h2{
+ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+ font-size: 6vh; 
+}
+#blackBoxContent p{
+    font-family: 'Signika Negative', sans-serif;
+}
+
+.newsletter-form input {
+    padding: 1.5vw;
+    width: 45%;
+    margin-right: 1.7vw;
+    border-radius: 3vw;
+  }
+
+  .newsletter-form button {
+    padding: 1.5vw;
+    background-color: #4285f4;
+    color: #fff;
+    border: none;
+    border-radius: 3vw;
+    cursor: pointer;
+  }
+#copywrite{
+    margin-top: 5vh;
+    text-align: center;
+}
