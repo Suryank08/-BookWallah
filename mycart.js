@@ -4,12 +4,14 @@ buyList = JSON.parse(localStorage.getItem('choosed'));
 
 class Ecom {
   flag(item) {
+  
     this.div = document.getElementById(item);
     if (!buyList) {
       buyList = [];
     }
 
     const selected = {
+      id:item,
       p: this.div.getElementsByTagName("p")[0].textContent,
 
       span: this.div.getElementsByTagName("span")[0].textContent,
@@ -43,14 +45,14 @@ class Ecom {
       div1.appendChild(img);
       const np = document.createElement("p");
       np.innerHTML = selectedList[i].p;
-      console.log(buyList[i].span);
+     
       div2.appendChild(np);
       const dbtn = document.createElement("button");
       div2.appendChild(dbtn);
       dbtn.innerHTML = "Delete Item"
 
       img.setAttribute("src", selectedList[i].img);
-
+      ndiv.setAttribute("id",selectedList[i].id);
       ndiv.setAttribute(
         "style",
         "display:flex;flex-direction:row;flex-wrap:nowrap;height:50vh;margin:0%;margin-bottom:5vh ;background-color:white;box-shadow: 10px 10px 20px black;margin-left:10%;margin-right:10%;border-radius:24px"
@@ -72,8 +74,15 @@ class Ecom {
 const ecom = new Ecom();
 
 function deleteitem(item) {
+  let deleteindex;
+  for(let i=0;i<buyList.length;i++)
+  { 
+    if(buyList[i].id===item.id){
+      buyList.splice(i, 1);
+    }
+  }
 
-  buyList.splice(item, 1);
+  
   item.remove();
   console.log(buyList);
   localStorage.setItem("choosed", JSON.stringify(buyList));
@@ -156,7 +165,7 @@ function cart() {
 const billdiv = {
   count: 0,
   totalBill: function () {
-    console.log('hii');
+  
     let sum = 0;
     let bill = document.getElementById("bill");
 
@@ -204,9 +213,9 @@ const billdiv = {
       // Update innerHTML or textContent based on your requirement
       // h3.innerHTML = "<p>" + sum + "</p>";
       // Alternatively, use textContent
-      h3.textContent = "Rs." + sum + "/-";
+     
 
-      console.log("length: " + sum);
+      h3.textContent = "Rs." + sum + "/-";
     } else {
       // Clear the content if buyList is empty
       div.remove();
